@@ -5,7 +5,10 @@ export function Headline(props) {
     return (
         <div>
             <p>
-                { props.title }
+                { props.title } Page
+            </p>
+            <p>
+                { props.children }
             </p>
             <div>
                 <a
