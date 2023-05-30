@@ -1,4 +1,4 @@
-import styles from '@/styles/Home.module.css'
+import styles from './Main.module.css'
 import { Inter } from 'next/font/google'
 import { Links } from "../components/Links"
 import { Logo } from "../components/Logo"
