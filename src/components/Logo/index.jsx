@@ -1,4 +1,4 @@
-import styles from './Logo.module.css'
+import styles from 'src/components/Logo/Logo.module.css'
 import Image from 'next/image'
 
 export function Logo() {
