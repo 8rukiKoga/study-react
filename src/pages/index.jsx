@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Main } from "src/components/Main"
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 
 export default function Home() {
 
@@ -9,6 +9,16 @@ export default function Home() {
   const handleClick = useCallback((e) => {
     e.preventDefault();
     alert(foo);
+  }, [])
+  
+  useEffect(() => {
+      console.log("マウント時");
+      document.body.style.backgroundColor = "lightblue";
+
+    return () => {
+      console.log("アンマウント時");
+      document.body.style.backgroundColor = "";
+    };
   }, [])
 
   return (
