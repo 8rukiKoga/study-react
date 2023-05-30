@@ -3,21 +3,24 @@ import { Inter } from 'next/font/google'
 import { Links } from "../components/Links"
 import { Logo } from "../components/Logo"
 import { Headline } from "../components/Headline"
+import { Header } from "../components/Header"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export function Main(props) {
-  return (
-      <main className={`${styles.main} ${inter.className}`}>
+    return (
+        <main className={`${styles.main} ${inter.className}`}>
 
-      <Headline title={props.page}>
-        <code className={styles.code}>pages/{props.page}.js</code>
-      </Headline>
+            <Header />
 
-        <Logo />
+            <Headline title={props.page}>
+                <code className={styles.code}>pages/{props.page}.js</code>
+            </Headline>
 
-        <Links />
+            <Logo />
 
-      </main>
-  )
+            <Links />
+
+        </main>
+    )
 }
