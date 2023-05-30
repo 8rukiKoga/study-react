@@ -1,16 +1,29 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
 import { Main } from "src/components/Main"
-
-const inter = Inter({ subsets: ['latin'] })
+import { useCallback } from 'react';
 
 export default function Home() {
+
+  const foo = "foo";
+
+  const handleClick = useCallback((e) => {
+    e.preventDefault();
+    alert(foo);
+  }, [])
+
   return (
     <>
       <Head>
         <title>Index Page</title>
       </Head>
-      
+
+      <a
+        href="/about"
+        onClick={handleClick}
+      >
+        ボタン
+      </a>
+
       <Main page="index" />
     </>
   )
