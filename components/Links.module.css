@@ -31,6 +31,13 @@
   max-width: 30ch;
 }
 
+.card:hover,
+.card:focus,
+.card.active {
+    color: #0070f3;
+    border-color: #0070f3;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
