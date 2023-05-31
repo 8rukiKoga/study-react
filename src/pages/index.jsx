@@ -6,10 +6,11 @@ export default function Home() {
 
   const [count, setCount] = useState(1)
 
-  const handleClick = (e) => {
-    setCount((count) => count + 1);
-    console.log(count);
-  }
+  const handleClick = useCallback(() => {
+    if (count < 10) {
+      setCount((count) => count + 1);
+    }
+  }, [count]);
   
   useEffect(() => {
       document.body.style.backgroundColor = "lightblue";
